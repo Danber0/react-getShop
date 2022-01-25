@@ -1,7 +1,11 @@
 import React from "react";
 import qrcode from "../assets/qrcode.png";
 
-export const Welcome = () => {
+interface WelcomeProps {
+  inputNumber: () => void;
+}
+
+export const Welcome: React.FC<WelcomeProps> = ({ inputNumber }) => {
   return (
     <div className="intro__content">
       <div className="container">
@@ -16,7 +20,7 @@ export const Welcome = () => {
             <p>Сканируйте QR-код или нажмите ОК</p>
           </div>
           <div className="dream__button">
-            <button>ОК</button>
+            <button onClick={inputNumber}>ОК</button>
           </div>
         </div>
       </div>
