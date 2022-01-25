@@ -13,7 +13,7 @@
 .video {
   position: relative;
   height: 720px;
-  z-index: 1;
+  z-index: 3;
   padding-bottom: 56.25%;
 
   &.intro {
@@ -40,29 +40,6 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  .qrcode {
-    position: absolute;
-    right: 50px;
-    bottom: 100px;
-
-    &__container {
-      display: flex;
-      width: 300px;
-      h5 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-align: right;
-        text-transform: uppercase;
-        color: #ffffff;
-        margin-right: 10px;
-      }
-    }
   }
 
   .dream {
@@ -111,7 +88,38 @@
       }
     }
   }
+}
 
+.user {
+  position: relative;
+  height: 700px;
+  z-index: 1;
+  padding-bottom: 56.25%;
+  background-image: url("./assets/bg.png");
+
+  .qrcode {
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    user-select: none;
+
+    &__container {
+      display: flex;
+      width: 300px;
+      h5 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 10px;
+      }
+    }
+  }
   .mobile {
     position: absolute;
     text-align: center;
@@ -160,10 +168,20 @@
       line-height: 19px;
       text-transform: uppercase;
       button {
+        transition: 0.25s all ease-in-out;
         cursor: pointer;
         padding: 15px 10px;
         background: none;
         border: 2px solid black;
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
       }
     }
     .number__clear {

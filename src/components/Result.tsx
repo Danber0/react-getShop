@@ -1,7 +1,7 @@
 import React from "react";
 import { QrCode } from "./QuCode";
 
-export const Result = () => {
+export const Result: React.FC = () => {
   return (
     <div className="intro__content">
       <div className="container">

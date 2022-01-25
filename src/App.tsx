@@ -27,12 +27,7 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        <div className="video">
-          <video className="video__media" muted loop>
-            <source src={video} type="video/webm" />
-          </video>
-          {steps[step]}
-        </div>
+        <div className="user">{steps[step]}</div>
       </div>
     </div>
   );
